@@ -90,16 +90,433 @@ function blacklistCheck(locator) {
 }
 
 let packageInformationStores = new Map([
+  ["typescript", new Map([
+    ["4.1.2", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-typescript-4.1.2-6369ef22516fe5e10304aae5a5c4862db55380e9-integrity/node_modules/typescript/"),
+      packageDependencies: new Map([
+        ["typescript", "4.1.2"],
+      ]),
+    }],
+  ])],
+  ["tslint", new Map([
+    ["6.1.3", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-tslint-6.1.3-5c23b2eccc32487d5523bd3a470e9aa31789d904-integrity/node_modules/tslint/"),
+      packageDependencies: new Map([
+        ["typescript", "4.1.2"],
+        ["@babel/code-frame", "7.10.4"],
+        ["builtin-modules", "1.1.1"],
+        ["chalk", "2.4.2"],
+        ["commander", "2.20.3"],
+        ["diff", "4.0.2"],
+        ["glob", "7.1.6"],
+        ["js-yaml", "3.14.0"],
+        ["minimatch", "3.0.4"],
+        ["mkdirp", "0.5.5"],
+        ["resolve", "1.19.0"],
+        ["semver", "5.7.1"],
+        ["tslib", "1.14.1"],
+        ["tsutils", "2.29.0"],
+        ["tslint", "6.1.3"],
+      ]),
+    }],
+  ])],
+  ["@babel/code-frame", new Map([
+    ["7.10.4", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-@babel-code-frame-7.10.4-168da1a36e90da68ae8d49c0f1b48c7c6249213a-integrity/node_modules/@babel/code-frame/"),
+      packageDependencies: new Map([
+        ["@babel/highlight", "7.10.4"],
+        ["@babel/code-frame", "7.10.4"],
+      ]),
+    }],
+  ])],
+  ["@babel/highlight", new Map([
+    ["7.10.4", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-@babel-highlight-7.10.4-7d1bdfd65753538fabe6c38596cdb76d9ac60143-integrity/node_modules/@babel/highlight/"),
+      packageDependencies: new Map([
+        ["@babel/helper-validator-identifier", "7.10.4"],
+        ["chalk", "2.4.2"],
+        ["js-tokens", "4.0.0"],
+        ["@babel/highlight", "7.10.4"],
+      ]),
+    }],
+  ])],
+  ["@babel/helper-validator-identifier", new Map([
+    ["7.10.4", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-@babel-helper-validator-identifier-7.10.4-a78c7a7251e01f616512d31b10adcf52ada5e0d2-integrity/node_modules/@babel/helper-validator-identifier/"),
+      packageDependencies: new Map([
+        ["@babel/helper-validator-identifier", "7.10.4"],
+      ]),
+    }],
+  ])],
+  ["chalk", new Map([
+    ["2.4.2", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-chalk-2.4.2-cd42541677a54333cf541a49108c1432b44c9424-integrity/node_modules/chalk/"),
+      packageDependencies: new Map([
+        ["ansi-styles", "3.2.1"],
+        ["escape-string-regexp", "1.0.5"],
+        ["supports-color", "5.5.0"],
+        ["chalk", "2.4.2"],
+      ]),
+    }],
+  ])],
+  ["ansi-styles", new Map([
+    ["3.2.1", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-ansi-styles-3.2.1-41fbb20243e50b12be0f04b8dedbf07520ce841d-integrity/node_modules/ansi-styles/"),
+      packageDependencies: new Map([
+        ["color-convert", "1.9.3"],
+        ["ansi-styles", "3.2.1"],
+      ]),
+    }],
+  ])],
+  ["color-convert", new Map([
+    ["1.9.3", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-color-convert-1.9.3-bb71850690e1f136567de629d2d5471deda4c1e8-integrity/node_modules/color-convert/"),
+      packageDependencies: new Map([
+        ["color-name", "1.1.3"],
+        ["color-convert", "1.9.3"],
+      ]),
+    }],
+  ])],
+  ["color-name", new Map([
+    ["1.1.3", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-color-name-1.1.3-a7d0558bd89c42f795dd42328f740831ca53bc25-integrity/node_modules/color-name/"),
+      packageDependencies: new Map([
+        ["color-name", "1.1.3"],
+      ]),
+    }],
+  ])],
+  ["escape-string-regexp", new Map([
+    ["1.0.5", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-escape-string-regexp-1.0.5-1b61c0562190a8dff6ae3bb2cf0200ca130b86d4-integrity/node_modules/escape-string-regexp/"),
+      packageDependencies: new Map([
+        ["escape-string-regexp", "1.0.5"],
+      ]),
+    }],
+  ])],
+  ["supports-color", new Map([
+    ["5.5.0", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-supports-color-5.5.0-e2e69a44ac8772f78a1ec0b35b689df6530efc8f-integrity/node_modules/supports-color/"),
+      packageDependencies: new Map([
+        ["has-flag", "3.0.0"],
+        ["supports-color", "5.5.0"],
+      ]),
+    }],
+  ])],
+  ["has-flag", new Map([
+    ["3.0.0", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-has-flag-3.0.0-b5d454dc2199ae225699f3467e5a07f3b955bafd-integrity/node_modules/has-flag/"),
+      packageDependencies: new Map([
+        ["has-flag", "3.0.0"],
+      ]),
+    }],
+  ])],
+  ["js-tokens", new Map([
+    ["4.0.0", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-js-tokens-4.0.0-19203fb59991df98e3a287050d4647cdeaf32499-integrity/node_modules/js-tokens/"),
+      packageDependencies: new Map([
+        ["js-tokens", "4.0.0"],
+      ]),
+    }],
+  ])],
+  ["builtin-modules", new Map([
+    ["1.1.1", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-builtin-modules-1.1.1-270f076c5a72c02f5b65a47df94c5fe3a278892f-integrity/node_modules/builtin-modules/"),
+      packageDependencies: new Map([
+        ["builtin-modules", "1.1.1"],
+      ]),
+    }],
+  ])],
+  ["commander", new Map([
+    ["2.20.3", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-commander-2.20.3-fd485e84c03eb4881c20722ba48035e8531aeb33-integrity/node_modules/commander/"),
+      packageDependencies: new Map([
+        ["commander", "2.20.3"],
+      ]),
+    }],
+  ])],
+  ["diff", new Map([
+    ["4.0.2", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-diff-4.0.2-60f3aecb89d5fae520c11aa19efc2bb982aade7d-integrity/node_modules/diff/"),
+      packageDependencies: new Map([
+        ["diff", "4.0.2"],
+      ]),
+    }],
+  ])],
+  ["glob", new Map([
+    ["7.1.6", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-glob-7.1.6-141f33b81a7c2492e125594307480c46679278a6-integrity/node_modules/glob/"),
+      packageDependencies: new Map([
+        ["fs.realpath", "1.0.0"],
+        ["inflight", "1.0.6"],
+        ["inherits", "2.0.4"],
+        ["minimatch", "3.0.4"],
+        ["once", "1.4.0"],
+        ["path-is-absolute", "1.0.1"],
+        ["glob", "7.1.6"],
+      ]),
+    }],
+  ])],
+  ["fs.realpath", new Map([
+    ["1.0.0", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-fs-realpath-1.0.0-1504ad2523158caa40db4a2787cb01411994ea4f-integrity/node_modules/fs.realpath/"),
+      packageDependencies: new Map([
+        ["fs.realpath", "1.0.0"],
+      ]),
+    }],
+  ])],
+  ["inflight", new Map([
+    ["1.0.6", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-inflight-1.0.6-49bd6331d7d02d0c09bc910a1075ba8165b56df9-integrity/node_modules/inflight/"),
+      packageDependencies: new Map([
+        ["once", "1.4.0"],
+        ["wrappy", "1.0.2"],
+        ["inflight", "1.0.6"],
+      ]),
+    }],
+  ])],
+  ["once", new Map([
+    ["1.4.0", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-once-1.4.0-583b1aa775961d4b113ac17d9c50baef9dd76bd1-integrity/node_modules/once/"),
+      packageDependencies: new Map([
+        ["wrappy", "1.0.2"],
+        ["once", "1.4.0"],
+      ]),
+    }],
+  ])],
+  ["wrappy", new Map([
+    ["1.0.2", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-wrappy-1.0.2-b5243d8f3ec1aa35f1364605bc0d1036e30ab69f-integrity/node_modules/wrappy/"),
+      packageDependencies: new Map([
+        ["wrappy", "1.0.2"],
+      ]),
+    }],
+  ])],
+  ["inherits", new Map([
+    ["2.0.4", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-inherits-2.0.4-0fa2c64f932917c3433a0ded55363aae37416b7c-integrity/node_modules/inherits/"),
+      packageDependencies: new Map([
+        ["inherits", "2.0.4"],
+      ]),
+    }],
+  ])],
+  ["minimatch", new Map([
+    ["3.0.4", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-minimatch-3.0.4-5166e286457f03306064be5497e8dbb0c3d32083-integrity/node_modules/minimatch/"),
+      packageDependencies: new Map([
+        ["brace-expansion", "1.1.11"],
+        ["minimatch", "3.0.4"],
+      ]),
+    }],
+  ])],
+  ["brace-expansion", new Map([
+    ["1.1.11", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-brace-expansion-1.1.11-3c7fcbf529d87226f3d2f52b966ff5271eb441dd-integrity/node_modules/brace-expansion/"),
+      packageDependencies: new Map([
+        ["balanced-match", "1.0.0"],
+        ["concat-map", "0.0.1"],
+        ["brace-expansion", "1.1.11"],
+      ]),
+    }],
+  ])],
+  ["balanced-match", new Map([
+    ["1.0.0", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-balanced-match-1.0.0-89b4d199ab2bee49de164ea02b89ce462d71b767-integrity/node_modules/balanced-match/"),
+      packageDependencies: new Map([
+        ["balanced-match", "1.0.0"],
+      ]),
+    }],
+  ])],
+  ["concat-map", new Map([
+    ["0.0.1", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-concat-map-0.0.1-d8a96bd77fd68df7793a73036a3ba0d5405d477b-integrity/node_modules/concat-map/"),
+      packageDependencies: new Map([
+        ["concat-map", "0.0.1"],
+      ]),
+    }],
+  ])],
+  ["path-is-absolute", new Map([
+    ["1.0.1", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-path-is-absolute-1.0.1-174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f-integrity/node_modules/path-is-absolute/"),
+      packageDependencies: new Map([
+        ["path-is-absolute", "1.0.1"],
+      ]),
+    }],
+  ])],
+  ["js-yaml", new Map([
+    ["3.14.0", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-js-yaml-3.14.0-a7a34170f26a21bb162424d8adacb4113a69e482-integrity/node_modules/js-yaml/"),
+      packageDependencies: new Map([
+        ["argparse", "1.0.10"],
+        ["esprima", "4.0.1"],
+        ["js-yaml", "3.14.0"],
+      ]),
+    }],
+  ])],
+  ["argparse", new Map([
+    ["1.0.10", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-argparse-1.0.10-bcd6791ea5ae09725e17e5ad988134cd40b3d911-integrity/node_modules/argparse/"),
+      packageDependencies: new Map([
+        ["sprintf-js", "1.0.3"],
+        ["argparse", "1.0.10"],
+      ]),
+    }],
+  ])],
+  ["sprintf-js", new Map([
+    ["1.0.3", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-sprintf-js-1.0.3-04e6926f662895354f3dd015203633b857297e2c-integrity/node_modules/sprintf-js/"),
+      packageDependencies: new Map([
+        ["sprintf-js", "1.0.3"],
+      ]),
+    }],
+  ])],
+  ["esprima", new Map([
+    ["4.0.1", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-esprima-4.0.1-13b04cdb3e6c5d19df91ab6987a8695619b0aa71-integrity/node_modules/esprima/"),
+      packageDependencies: new Map([
+        ["esprima", "4.0.1"],
+      ]),
+    }],
+  ])],
+  ["mkdirp", new Map([
+    ["0.5.5", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-mkdirp-0.5.5-d91cefd62d1436ca0f41620e251288d420099def-integrity/node_modules/mkdirp/"),
+      packageDependencies: new Map([
+        ["minimist", "1.2.5"],
+        ["mkdirp", "0.5.5"],
+      ]),
+    }],
+  ])],
+  ["minimist", new Map([
+    ["1.2.5", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-minimist-1.2.5-67d66014b66a6a8aaa0c083c5fd58df4e4e97602-integrity/node_modules/minimist/"),
+      packageDependencies: new Map([
+        ["minimist", "1.2.5"],
+      ]),
+    }],
+  ])],
+  ["resolve", new Map([
+    ["1.19.0", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-resolve-1.19.0-1af5bf630409734a067cae29318aac7fa29a267c-integrity/node_modules/resolve/"),
+      packageDependencies: new Map([
+        ["is-core-module", "2.2.0"],
+        ["path-parse", "1.0.6"],
+        ["resolve", "1.19.0"],
+      ]),
+    }],
+  ])],
+  ["is-core-module", new Map([
+    ["2.2.0", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-is-core-module-2.2.0-97037ef3d52224d85163f5597b2b63d9afed981a-integrity/node_modules/is-core-module/"),
+      packageDependencies: new Map([
+        ["has", "1.0.3"],
+        ["is-core-module", "2.2.0"],
+      ]),
+    }],
+  ])],
+  ["has", new Map([
+    ["1.0.3", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-has-1.0.3-722d7cbfc1f6aa8241f16dd814e011e1f41e8796-integrity/node_modules/has/"),
+      packageDependencies: new Map([
+        ["function-bind", "1.1.1"],
+        ["has", "1.0.3"],
+      ]),
+    }],
+  ])],
+  ["function-bind", new Map([
+    ["1.1.1", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-function-bind-1.1.1-a56899d3ea3c9bab874bb9773b7c5ede92f4895d-integrity/node_modules/function-bind/"),
+      packageDependencies: new Map([
+        ["function-bind", "1.1.1"],
+      ]),
+    }],
+  ])],
+  ["path-parse", new Map([
+    ["1.0.6", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-path-parse-1.0.6-d62dbb5679405d72c4737ec58600e9ddcf06d24c-integrity/node_modules/path-parse/"),
+      packageDependencies: new Map([
+        ["path-parse", "1.0.6"],
+      ]),
+    }],
+  ])],
+  ["semver", new Map([
+    ["5.7.1", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-semver-5.7.1-a954f931aeba508d307bbf069eff0c01c96116f7-integrity/node_modules/semver/"),
+      packageDependencies: new Map([
+        ["semver", "5.7.1"],
+      ]),
+    }],
+  ])],
+  ["tslib", new Map([
+    ["1.14.1", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-tslib-1.14.1-cf2d38bdc34a134bcaf1091c41f6619e2f672d00-integrity/node_modules/tslib/"),
+      packageDependencies: new Map([
+        ["tslib", "1.14.1"],
+      ]),
+    }],
+  ])],
+  ["tsutils", new Map([
+    ["2.29.0", {
+      packageLocation: path.resolve(__dirname, "../../Library/Caches/Yarn/v6/npm-tsutils-2.29.0-32b488501467acbedd4b85498673a0812aca0b99-integrity/node_modules/tsutils/"),
+      packageDependencies: new Map([
+        ["typescript", "4.1.2"],
+        ["tslib", "1.14.1"],
+        ["tsutils", "2.29.0"],
+      ]),
+    }],
+  ])],
   [null, new Map([
     [null, {
       packageLocation: path.resolve(__dirname, "./"),
       packageDependencies: new Map([
+        ["typescript", "4.1.2"],
+        ["tslint", "6.1.3"],
       ]),
     }],
   ])],
 ]);
 
 let locatorsByLocations = new Map([
+  ["../../Library/Caches/Yarn/v6/npm-typescript-4.1.2-6369ef22516fe5e10304aae5a5c4862db55380e9-integrity/node_modules/typescript/", {"name":"typescript","reference":"4.1.2"}],
+  ["../../Library/Caches/Yarn/v6/npm-tslint-6.1.3-5c23b2eccc32487d5523bd3a470e9aa31789d904-integrity/node_modules/tslint/", {"name":"tslint","reference":"6.1.3"}],
+  ["../../Library/Caches/Yarn/v6/npm-@babel-code-frame-7.10.4-168da1a36e90da68ae8d49c0f1b48c7c6249213a-integrity/node_modules/@babel/code-frame/", {"name":"@babel/code-frame","reference":"7.10.4"}],
+  ["../../Library/Caches/Yarn/v6/npm-@babel-highlight-7.10.4-7d1bdfd65753538fabe6c38596cdb76d9ac60143-integrity/node_modules/@babel/highlight/", {"name":"@babel/highlight","reference":"7.10.4"}],
+  ["../../Library/Caches/Yarn/v6/npm-@babel-helper-validator-identifier-7.10.4-a78c7a7251e01f616512d31b10adcf52ada5e0d2-integrity/node_modules/@babel/helper-validator-identifier/", {"name":"@babel/helper-validator-identifier","reference":"7.10.4"}],
+  ["../../Library/Caches/Yarn/v6/npm-chalk-2.4.2-cd42541677a54333cf541a49108c1432b44c9424-integrity/node_modules/chalk/", {"name":"chalk","reference":"2.4.2"}],
+  ["../../Library/Caches/Yarn/v6/npm-ansi-styles-3.2.1-41fbb20243e50b12be0f04b8dedbf07520ce841d-integrity/node_modules/ansi-styles/", {"name":"ansi-styles","reference":"3.2.1"}],
+  ["../../Library/Caches/Yarn/v6/npm-color-convert-1.9.3-bb71850690e1f136567de629d2d5471deda4c1e8-integrity/node_modules/color-convert/", {"name":"color-convert","reference":"1.9.3"}],
+  ["../../Library/Caches/Yarn/v6/npm-color-name-1.1.3-a7d0558bd89c42f795dd42328f740831ca53bc25-integrity/node_modules/color-name/", {"name":"color-name","reference":"1.1.3"}],
+  ["../../Library/Caches/Yarn/v6/npm-escape-string-regexp-1.0.5-1b61c0562190a8dff6ae3bb2cf0200ca130b86d4-integrity/node_modules/escape-string-regexp/", {"name":"escape-string-regexp","reference":"1.0.5"}],
+  ["../../Library/Caches/Yarn/v6/npm-supports-color-5.5.0-e2e69a44ac8772f78a1ec0b35b689df6530efc8f-integrity/node_modules/supports-color/", {"name":"supports-color","reference":"5.5.0"}],
+  ["../../Library/Caches/Yarn/v6/npm-has-flag-3.0.0-b5d454dc2199ae225699f3467e5a07f3b955bafd-integrity/node_modules/has-flag/", {"name":"has-flag","reference":"3.0.0"}],
+  ["../../Library/Caches/Yarn/v6/npm-js-tokens-4.0.0-19203fb59991df98e3a287050d4647cdeaf32499-integrity/node_modules/js-tokens/", {"name":"js-tokens","reference":"4.0.0"}],
+  ["../../Library/Caches/Yarn/v6/npm-builtin-modules-1.1.1-270f076c5a72c02f5b65a47df94c5fe3a278892f-integrity/node_modules/builtin-modules/", {"name":"builtin-modules","reference":"1.1.1"}],
+  ["../../Library/Caches/Yarn/v6/npm-commander-2.20.3-fd485e84c03eb4881c20722ba48035e8531aeb33-integrity/node_modules/commander/", {"name":"commander","reference":"2.20.3"}],
+  ["../../Library/Caches/Yarn/v6/npm-diff-4.0.2-60f3aecb89d5fae520c11aa19efc2bb982aade7d-integrity/node_modules/diff/", {"name":"diff","reference":"4.0.2"}],
+  ["../../Library/Caches/Yarn/v6/npm-glob-7.1.6-141f33b81a7c2492e125594307480c46679278a6-integrity/node_modules/glob/", {"name":"glob","reference":"7.1.6"}],
+  ["../../Library/Caches/Yarn/v6/npm-fs-realpath-1.0.0-1504ad2523158caa40db4a2787cb01411994ea4f-integrity/node_modules/fs.realpath/", {"name":"fs.realpath","reference":"1.0.0"}],
+  ["../../Library/Caches/Yarn/v6/npm-inflight-1.0.6-49bd6331d7d02d0c09bc910a1075ba8165b56df9-integrity/node_modules/inflight/", {"name":"inflight","reference":"1.0.6"}],
+  ["../../Library/Caches/Yarn/v6/npm-once-1.4.0-583b1aa775961d4b113ac17d9c50baef9dd76bd1-integrity/node_modules/once/", {"name":"once","reference":"1.4.0"}],
+  ["../../Library/Caches/Yarn/v6/npm-wrappy-1.0.2-b5243d8f3ec1aa35f1364605bc0d1036e30ab69f-integrity/node_modules/wrappy/", {"name":"wrappy","reference":"1.0.2"}],
+  ["../../Library/Caches/Yarn/v6/npm-inherits-2.0.4-0fa2c64f932917c3433a0ded55363aae37416b7c-integrity/node_modules/inherits/", {"name":"inherits","reference":"2.0.4"}],
+  ["../../Library/Caches/Yarn/v6/npm-minimatch-3.0.4-5166e286457f03306064be5497e8dbb0c3d32083-integrity/node_modules/minimatch/", {"name":"minimatch","reference":"3.0.4"}],
+  ["../../Library/Caches/Yarn/v6/npm-brace-expansion-1.1.11-3c7fcbf529d87226f3d2f52b966ff5271eb441dd-integrity/node_modules/brace-expansion/", {"name":"brace-expansion","reference":"1.1.11"}],
+  ["../../Library/Caches/Yarn/v6/npm-balanced-match-1.0.0-89b4d199ab2bee49de164ea02b89ce462d71b767-integrity/node_modules/balanced-match/", {"name":"balanced-match","reference":"1.0.0"}],
+  ["../../Library/Caches/Yarn/v6/npm-concat-map-0.0.1-d8a96bd77fd68df7793a73036a3ba0d5405d477b-integrity/node_modules/concat-map/", {"name":"concat-map","reference":"0.0.1"}],
+  ["../../Library/Caches/Yarn/v6/npm-path-is-absolute-1.0.1-174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f-integrity/node_modules/path-is-absolute/", {"name":"path-is-absolute","reference":"1.0.1"}],
+  ["../../Library/Caches/Yarn/v6/npm-js-yaml-3.14.0-a7a34170f26a21bb162424d8adacb4113a69e482-integrity/node_modules/js-yaml/", {"name":"js-yaml","reference":"3.14.0"}],
+  ["../../Library/Caches/Yarn/v6/npm-argparse-1.0.10-bcd6791ea5ae09725e17e5ad988134cd40b3d911-integrity/node_modules/argparse/", {"name":"argparse","reference":"1.0.10"}],
+  ["../../Library/Caches/Yarn/v6/npm-sprintf-js-1.0.3-04e6926f662895354f3dd015203633b857297e2c-integrity/node_modules/sprintf-js/", {"name":"sprintf-js","reference":"1.0.3"}],
+  ["../../Library/Caches/Yarn/v6/npm-esprima-4.0.1-13b04cdb3e6c5d19df91ab6987a8695619b0aa71-integrity/node_modules/esprima/", {"name":"esprima","reference":"4.0.1"}],
+  ["../../Library/Caches/Yarn/v6/npm-mkdirp-0.5.5-d91cefd62d1436ca0f41620e251288d420099def-integrity/node_modules/mkdirp/", {"name":"mkdirp","reference":"0.5.5"}],
+  ["../../Library/Caches/Yarn/v6/npm-minimist-1.2.5-67d66014b66a6a8aaa0c083c5fd58df4e4e97602-integrity/node_modules/minimist/", {"name":"minimist","reference":"1.2.5"}],
+  ["../../Library/Caches/Yarn/v6/npm-resolve-1.19.0-1af5bf630409734a067cae29318aac7fa29a267c-integrity/node_modules/resolve/", {"name":"resolve","reference":"1.19.0"}],
+  ["../../Library/Caches/Yarn/v6/npm-is-core-module-2.2.0-97037ef3d52224d85163f5597b2b63d9afed981a-integrity/node_modules/is-core-module/", {"name":"is-core-module","reference":"2.2.0"}],
+  ["../../Library/Caches/Yarn/v6/npm-has-1.0.3-722d7cbfc1f6aa8241f16dd814e011e1f41e8796-integrity/node_modules/has/", {"name":"has","reference":"1.0.3"}],
+  ["../../Library/Caches/Yarn/v6/npm-function-bind-1.1.1-a56899d3ea3c9bab874bb9773b7c5ede92f4895d-integrity/node_modules/function-bind/", {"name":"function-bind","reference":"1.1.1"}],
+  ["../../Library/Caches/Yarn/v6/npm-path-parse-1.0.6-d62dbb5679405d72c4737ec58600e9ddcf06d24c-integrity/node_modules/path-parse/", {"name":"path-parse","reference":"1.0.6"}],
+  ["../../Library/Caches/Yarn/v6/npm-semver-5.7.1-a954f931aeba508d307bbf069eff0c01c96116f7-integrity/node_modules/semver/", {"name":"semver","reference":"5.7.1"}],
+  ["../../Library/Caches/Yarn/v6/npm-tslib-1.14.1-cf2d38bdc34a134bcaf1091c41f6619e2f672d00-integrity/node_modules/tslib/", {"name":"tslib","reference":"1.14.1"}],
+  ["../../Library/Caches/Yarn/v6/npm-tsutils-2.29.0-32b488501467acbedd4b85498673a0812aca0b99-integrity/node_modules/tsutils/", {"name":"tsutils","reference":"2.29.0"}],
   ["./", topLevelLocator],
 ]);
 exports.findPackageLocator = function findPackageLocator(location) {
@@ -112,6 +529,94 @@ exports.findPackageLocator = function findPackageLocator(location) {
     relativeLocation = `${relativeLocation}/`;
 
   let match;
+
+  if (relativeLocation.length >= 174 && relativeLocation[173] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 174)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 145 && relativeLocation[144] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 145)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 140 && relativeLocation[139] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 140)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 138 && relativeLocation[137] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 138)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 137 && relativeLocation[136] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 137)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 136 && relativeLocation[135] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 136)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 135 && relativeLocation[134] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 135)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 133 && relativeLocation[132] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 133)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 131 && relativeLocation[130] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 131)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 127 && relativeLocation[126] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 127)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 125 && relativeLocation[124] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 125)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 124 && relativeLocation[123] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 124)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 123 && relativeLocation[122] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 123)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 122 && relativeLocation[121] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 122)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 121 && relativeLocation[120] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 121)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 120 && relativeLocation[119] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 120)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 119 && relativeLocation[118] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 119)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 117 && relativeLocation[116] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 117)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 116 && relativeLocation[115] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 116)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 115 && relativeLocation[114] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 115)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 113 && relativeLocation[112] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 113)))
+      return blacklistCheck(match);
+
+  if (relativeLocation.length >= 111 && relativeLocation[110] === '/')
+    if (match = locatorsByLocations.get(relativeLocation.substr(0, 111)))
+      return blacklistCheck(match);
 
   if (relativeLocation.length >= 2 && relativeLocation[1] === '/')
     if (match = locatorsByLocations.get(relativeLocation.substr(0, 2)))
