@@ -1,3 +1,6 @@
+import fs from "fs";
+import path from "path";
+
 import day1 from "./day1";
 import day2 from "./day2";
 import { DayFunc, DayPart } from "./types";
@@ -16,4 +19,7 @@ const part = process.argv[3] as DayPart;
 
 console.log({ day, part });
 
-console.log(days[day](part));
+
+const data = fs.readFileSync(path.join(__dirname, `../data/day${day}.txt`)).toString();
+
+console.log(days[day](part, data));
