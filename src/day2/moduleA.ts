@@ -1,4 +1,5 @@
 import { parseLine } from "./helpers";
+import { PasswordEntry } from "./types";
 
 export const passwordEntryIsValid = (entry: PasswordEntry): boolean => {
   const {

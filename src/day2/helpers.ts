@@ -1,3 +1,5 @@
+import {PasswordEntry} from './types';
+
 export const parseLine = (line: string): PasswordEntry => {
   const [, min, max, char, password] = line.match(
     /^([\d]+)\-([\d]+) ([a-z])\: ([a-z]+)$/

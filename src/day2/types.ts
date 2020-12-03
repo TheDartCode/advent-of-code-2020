@@ -8,3 +8,5 @@ type PasswordEntry = {
   policy: PasswordPolicy;
   password: string;
 };
+
+export { PasswordEntry, PasswordPolicy };
