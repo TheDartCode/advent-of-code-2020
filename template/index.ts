@@ -1,20 +1,14 @@
-import fs from "fs";
-import path from "path";
-
 import { DayFunc } from "../types";
 
 import moduleA from "./moduleA";
 import moduleB from "./moduleB";
 
-export const readInputA = () =>
-  fs.readFileSync(path.join(__dirname, "inputA.txt")).toString();
-
-const dayX: DayFunc = (part) => {
+const dayX: DayFunc = (part, data) => {
   switch (part) {
     case "a":
-      return moduleA(readInputA()).toString();
+      return moduleA(data).toString();
     case "b":
-      return moduleB(readInputA()).toString();
+      return moduleB(data).toString();
     default:
       throw new Error(`Wrong part given, \`${part}\``);
   }
