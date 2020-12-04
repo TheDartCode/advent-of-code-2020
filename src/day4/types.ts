@@ -17,6 +17,64 @@ type FieldSet = {
   [key in ExpectedFields]?: string;
 };
 
+type ExtendedValidatorFunction = (value: string) => boolean;
+type FieldValidatorFunction = (value: string, strict: boolean) => boolean;
+type FieldValidatorMapping = {
+  [key in ExpectedFields]: FieldValidatorFunction;
+};
+
+const createValidatorFunction = (
+  extraValidator: ExtendedValidatorFunction
+): FieldValidatorFunction => (value: string, strict: boolean) => {
+  if (!strict) {
+    return !!value;
+  }
+  if (!value) {
+    return false;
+  }
+
+  return extraValidator(value);
+};
+
+const FieldValidators: FieldValidatorMapping = {
+  [ExpectedFields.BirthYear]: createValidatorFunction((value) => {
+    const yearAsNumber = parseInt(value);
+    return yearAsNumber >= 1920 && yearAsNumber <= 2002;
+  }),
+  [ExpectedFields.IssueYear]: createValidatorFunction((value) => {
+    const yearAsNumber = parseInt(value);
+    return yearAsNumber >= 2010 && yearAsNumber <= 2020;
+  }),
+  [ExpectedFields.ExpirationYear]: createValidatorFunction((value) => {
+    const yearAsNumber = parseInt(value);
+    return yearAsNumber >= 2020 && yearAsNumber <= 2030;
+  }),
+  [ExpectedFields.Height]: createValidatorFunction((value) => {
+    const matcher = /(\d+)(cm|in)/;
+    const [, heightString, unit] = value.match(matcher) || [];
+    const height = parseInt(heightString);
+    switch (unit) {
+      case "cm":
+        return height >= 150 && height <= 193;
+      case "in":
+        return height >= 59 && height <= 76;
+      default:
+        return false;
+    }
+  }),
+  [ExpectedFields.HairColor]: createValidatorFunction((value) => {
+    const matcher = /^#[0-9a-f]{6,6}$/;
+    return !!value.match(matcher);
+  }),
+  [ExpectedFields.EyeColor]: createValidatorFunction((value) => {
+    return ["amb", "blu", "brn", "gry", "grn", "hzl", "oth"].includes(value);
+  }),
+  [ExpectedFields.PassportID]: createValidatorFunction((value) => {
+    return value.length === 9 && !isNaN(parseInt(value));
+  }),
+  [ExpectedFields.CountryID]: (value, strict) => true,
+};
+
 class Passport {
   fields: FieldSet = {};
 
@@ -34,10 +92,17 @@ class Passport {
     });
   }
 
-  isValid() {
-    return ExpectedFieldKeys.every(
-      (key) => OptionalKeys.includes(key) || !!this.fields[key]
-    );
+  isValid({ strict = false } = {}) {
+    try {
+      return ExpectedFieldKeys.every(
+        (key) =>
+          OptionalKeys.includes(key) ||
+          FieldValidators[key](this.fields[key], strict)
+      );
+    } catch (err) {
+      console.log(err.message, this.dbg());
+      return false;
+    }
   }
 
   dbg() {
