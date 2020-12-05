@@ -7,7 +7,8 @@
     "build": "tsc",
     "start": "node dist/app.js",
     "test": "jest",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "bootstrapDay": "function bootstrap_day(){ DAY=$1; cp -r template \"src/day$DAY\";}; bootstrap_day"
   },
   "author": "",
   "license": "ISC",
