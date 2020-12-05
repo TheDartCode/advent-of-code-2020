@@ -3,7 +3,7 @@ import { DayFunc } from "../types";
 import moduleA from "./moduleA";
 import moduleB from "./moduleB";
 
-const dayX: DayFunc = (part, data) => {
+const day5: DayFunc = (part, data) => {
   switch (part) {
     case "a":
       return moduleA(data).toString();
@@ -14,4 +14,4 @@ const dayX: DayFunc = (part, data) => {
   }
 };
 
-export default dayX;
+export default day5;

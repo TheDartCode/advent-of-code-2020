@@ -74,8 +74,4 @@ export class SeatFinder {
   getSeatID(seat: { row: number, column: number }): number {
     return seat.row * 8 + seat.column;
   }
-
-  getAllPossibleSeats() {
-
-  }
 }

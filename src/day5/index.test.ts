@@ -6,6 +6,10 @@ BFFFBBFRRR
 FFFBBBFRRR
 BBFFBBFRLL`;
 
+const TEST_DATA_B = `FFFFFFFLLL
+FFFFFFFLLR
+FFFFFFFLRR`;
+
 describe("day5", () => {
   describe("Tree", () => {
     it("creates a binary Tree with the correct leaves", () => {
@@ -68,7 +72,7 @@ describe("day5", () => {
   });
   describe("second part", () => {
     it("satisfies test data", () => {
-      expect(day5("b", TEST_DATA)).toBe(1);
+      expect(day5("b", TEST_DATA_B)).toBe("2");
     });
   });
 });
