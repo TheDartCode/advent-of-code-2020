@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/app.js",
+    "start": "npm run build && npm run solve",
+    "solve": "node dist/app.js",
     "test": "jest",
     "coverage": "jest --coverage",
     "bootstrapDay": "function bootstrap_day(){ DAY=$1; cp -r template \"src/day$DAY\";}; bootstrap_day"
