@@ -6,6 +6,7 @@ import day2 from "./day2";
 import day3 from "./day3";
 import day4 from "./day4";
 import day5 from "./day5";
+import day6 from "./day6";
 import { DayFunc, DayPart } from "./types";
 
 type DaysDictionary = {
@@ -18,6 +19,7 @@ const days: DaysDictionary = {
   "3": day3,
   "4": day4,
   "5": day5,
+  "6": day6,
 };
 
 const day = process.argv[2];
@@ -25,7 +27,8 @@ const part = process.argv[3] as DayPart;
 
 console.log({ day, part });
 
-
-const data = fs.readFileSync(path.join(__dirname, `../data/day${day}.txt`)).toString();
+const data = fs
+  .readFileSync(path.join(__dirname, `../data/day${day}.txt`))
+  .toString();
 
 console.log(days[day](part, data));
