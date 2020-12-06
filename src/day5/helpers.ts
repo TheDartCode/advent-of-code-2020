@@ -23,7 +23,7 @@ export class Tree {
 
   navigate(path: TreeBisection[]): Leaf {
     let currentNode: TreeNode | Leaf = this.root;
-    path.forEach(value => {
+    path.forEach((value) => {
       if (!("left" in currentNode)) {
         return currentNode;
       }
@@ -38,8 +38,8 @@ export class Tree {
   private buildSubtree(depth: number = 0, maxDepth): TreeNode {
     const root = new TreeNode();
     if (depth === maxDepth) {
-      root.left = {label: this.nextLabel++};
-      root.right = {label: this.nextLabel++};
+      root.left = { label: this.nextLabel++ };
+      root.right = { label: this.nextLabel++ };
       this.leaves.push(root.left, root.right);
     } else {
       root.left = this.buildSubtree(depth + 1, maxDepth);
@@ -60,18 +60,20 @@ export class SeatFinder {
     this.columns = new Tree(SeatFinder.COLUMNS);
   }
 
-  findSeat(path: string): { row: number, column: number } {
+  findSeat(path: string): { row: number; column: number } {
     const [, rowSelector, columnSelector] = path.match(/^([FB]{7})([LR]{3})$/);
     return {
-      row: this.rows.navigate(rowSelector
-        .split("")
-        .map(c => (c === "F" ? "L" : "R")) as TreeBisection[]).label,
+      row: this.rows.navigate(
+        rowSelector
+          .split("")
+          .map((c) => (c === "F" ? "L" : "R")) as TreeBisection[]
+      ).label,
       column: this.columns.navigate(columnSelector.split("") as TreeBisection[])
-        .label
+        .label,
     };
   }
 
-  getSeatID(seat: { row: number, column: number }): number {
+  getSeatID(seat: { row: number; column: number }): number {
     return seat.row * 8 + seat.column;
   }
 }

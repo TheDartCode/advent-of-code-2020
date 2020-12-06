@@ -14,7 +14,7 @@ describe("day5", () => {
   describe("Tree", () => {
     it("creates a binary Tree with the correct leaves", () => {
       const tree = new Tree(16);
-      expect(tree.leaves.map(l => l.label)).toEqual([
+      expect(tree.leaves.map((l) => l.label)).toEqual([
         0,
         1,
         2,
@@ -30,7 +30,7 @@ describe("day5", () => {
         12,
         13,
         14,
-        15
+        15,
       ]);
     });
 
@@ -38,7 +38,7 @@ describe("day5", () => {
       it("navigates correctly to specified leaf", () => {
         const tree = new Tree(16);
         expect(tree.navigate("LLRR".split("") as TreeBisection[])).toEqual({
-          label: 3
+          label: 3,
         });
       });
     });
@@ -48,13 +48,13 @@ describe("day5", () => {
       const seatFinder = new SeatFinder();
       expect(seatFinder.findSeat("FBFBBFFRLR")).toEqual({
         row: 44,
-        column: 5
+        column: 5,
       });
       expect(seatFinder.findSeat("BFFFBBFRRR")).toEqual({ column: 7, row: 70 });
       expect(seatFinder.findSeat("FFFBBBFRRR")).toEqual({ column: 7, row: 14 });
       expect(seatFinder.findSeat("BBFFBBFRLL")).toEqual({
         column: 4,
-        row: 102
+        row: 102,
       });
     });
     it("calculates the ID for a given seat path", () => {
