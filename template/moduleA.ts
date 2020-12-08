@@ -1,5 +1,5 @@
 const moduleA = (list) => {
-  return null;
+  return list;
 };
 
 export default moduleA;
