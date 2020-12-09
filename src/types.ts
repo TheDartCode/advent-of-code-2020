@@ -1,4 +1,4 @@
-type DayFunc = (part: "a" | "b", data: string) => string;
+type DayFunc = (part: "a" | "b", data: string, extraOptions?: Object) => string;
 
 enum DayPart {
   "a" = 'a',
