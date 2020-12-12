@@ -9,7 +9,7 @@
     "solve": "npm run build && npm start",
     "test": "jest",
     "coverage": "jest --coverage",
-    "bootstrapDay": "function bootstrap_day(){ DAY=$1; cp -r template \"src/day$DAY\"; touch \"data/day$DAY.txt\";}; bootstrap_day"
+    "bootstrapDay": "./scripts/bootstrap_day"
   },
   "author": "",
   "license": "ISC",
