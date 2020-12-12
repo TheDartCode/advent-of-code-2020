@@ -12,6 +12,7 @@ import day8 from "./day8";
 import day9 from "./day9";
 import day10 from "./day10";
 import day11 from "./day11";
+import day12 from "./day12";
 import { DayFunc, DayPart } from "./types";
 
 type DaysDictionary = {
@@ -30,6 +31,7 @@ const days: DaysDictionary = {
   "9": day9,
   "10": day10,
   "11": day11,
+  "12": day12,
 };
 
 const day = process.argv[2];
