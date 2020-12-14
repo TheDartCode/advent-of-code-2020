@@ -5,6 +5,11 @@ mem[8] = 11
 mem[7] = 101
 mem[8] = 0`;
 
+const TEST_DATA_B = `mask = 000000000000000000000000000000X1001X
+mem[42] = 100
+mask = 00000000000000000000000000000000X0XX
+mem[26] = 1`;
+
 describe("day14", () => {
   describe("first part", () => {
     it("satisfies test data", () => {
@@ -12,8 +17,8 @@ describe("day14", () => {
     });
   });
   describe("second part", () => {
-    it.skip("satisfies test data", () => {
-      expect(day14("b", TEST_DATA)).toBe("1");
+    it("satisfies test data", () => {
+      expect(day14("b", TEST_DATA_B)).toBe("208");
     });
   });
 });
