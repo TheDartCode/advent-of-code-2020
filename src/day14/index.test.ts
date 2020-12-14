@@ -7,8 +7,8 @@ mem[8] = 0`;
 
 describe("day14", () => {
   describe("first part", () => {
-    it.skip("satisfies test data", () => {
-      expect(day14("a", TEST_DATA)).toBe("2");
+    it("satisfies test data", () => {
+      expect(day14("a", TEST_DATA)).toBe("165");
     });
   });
   describe("second part", () => {
