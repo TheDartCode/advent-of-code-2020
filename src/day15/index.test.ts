@@ -9,8 +9,8 @@ describe("day15", () => {
     });
   });
   describe("second part", () => {
-    it.skip("satisfies test data", () => {
-      expect(day15("b", TEST_DATA)).toBe("1");
+    it("satisfies test data for 1e6 rounds", () => {
+      expect(day15("b", TEST_DATA, 1e6)).toBe("130");
     });
   });
 });
