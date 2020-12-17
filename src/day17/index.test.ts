@@ -1,6 +1,6 @@
 import day17 from "./index";
 import { parseGrid, expandGrid } from "./helpers";
-import { CubeState, Grid } from "./types";
+import { CubeState, ThreeDimGrid } from "./types";
 import { round, visualizeGrid } from "./moduleA";
 
 const TEST_DATA = `.#.
@@ -32,7 +32,7 @@ describe("day17", () => {
     });
     describe("#expandGrid", () => {
       it("expands a given grid accross all dimensions", () => {
-        const grid: Grid = {
+        const grid: ThreeDimGrid = {
           "0": {
             "0": {
               "0": { state: CubeState.Inactive },
@@ -286,8 +286,8 @@ z=3
     });
   });
   describe("second part", () => {
-    it.skip("satisfies test data", () => {
-      expect(day17("b", TEST_DATA)).toBe("1");
+    it("satisfies test data", () => {
+      expect(day17("b", TEST_DATA)).toBe("848");
     });
   });
 });

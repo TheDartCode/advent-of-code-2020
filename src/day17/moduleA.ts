@@ -1,8 +1,8 @@
-import { Grid, Cube, CubeState } from "./types";
+import { ThreeDimGrid, Cube, CubeState } from "./types";
 import { cloneGrid, expandGrid, parseGrid } from "./helpers";
 
 const countActiveCubeNeighbors = (
-  grid: Grid,
+  grid: ThreeDimGrid,
   x: number,
   y: number,
   z: number
@@ -31,9 +31,9 @@ const countActiveCubeNeighbors = (
   return result;
 };
 
-export const round = (grid: Grid) => {
+export const round = (grid: ThreeDimGrid) => {
   expandGrid(grid);
-  const newGrid: Grid = cloneGrid(grid);
+  const newGrid: ThreeDimGrid = cloneGrid(grid);
   // need to extend grid
   for (let z in grid) {
     for (let y in grid[z]) {
@@ -67,7 +67,7 @@ const getSortedDimensions = (wrapper: Object) => {
   );
 };
 
-export const visualizeGrid = (grid: Grid): string => {
+export const visualizeGrid = (grid: ThreeDimGrid): string => {
   const dimensions = getSortedDimensions(grid)
     .map(([z, dimension]) => {
       return (

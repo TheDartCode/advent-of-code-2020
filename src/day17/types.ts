@@ -15,6 +15,10 @@ export type TwoDimGrid = {
   [pos: string]: OneDimGrid;
 };
 
-export type Grid = {
+export type ThreeDimGrid = {
   [z: string]: TwoDimGrid;
+};
+
+export type FourDimGrid = {
+  [z: string]: ThreeDimGrid;
 };
