@@ -2,7 +2,7 @@ import { performance } from "perf_hooks";
 
 export class PerformanceMonitor {
   start = performance.now();
-  constructor(tag: string) {}
+  constructor(tag?: string) {}
 
   public tick(): number {
     const now = performance.now();

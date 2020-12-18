@@ -20,6 +20,7 @@ import day16 from "./day16";
 import day17 from "./day17";
 import day18 from "./day18";
 import { DayFunc, DayPart } from "./types";
+import { PerformanceMonitor } from "./shared/helpers";
 
 type DaysDictionary = {
   [property: string]: DayFunc;
@@ -55,4 +56,10 @@ const data = fs
   .readFileSync(path.join(__dirname, `../data/day${day}.txt`))
   .toString();
 
-console.log(days[day](part, data));
+const pm = new PerformanceMonitor();
+
+const result = days[day](part, data);
+const time = pm.tick();
+
+console.log({ result });
+console.log(`Done in ${time.toFixed(2)}ms`);
