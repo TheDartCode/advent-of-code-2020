@@ -6,6 +6,12 @@ import {
   rotateMatrix,
 } from "./helpers";
 import day20 from "./index";
+import {
+  constructImage,
+  findBestImageFit,
+  getPossibleUpperLeftCornerTiles,
+  revealSeaMonsters,
+} from "./moduleB";
 import { Tile } from "./types";
 
 const TEST_DATA = `Tile 2311:
@@ -310,8 +316,133 @@ describe("day20", () => {
     });
   });
   describe("second part", () => {
-    it.skip("satisfies test data", () => {
-      expect(day20("b", TEST_DATA)).toBe("1");
+    describe("#constructImage()", () => {
+      it("finds a matching combination of tiles and constructs the ascii image, discarding borders", () => {
+        const tiles = TEST_DATA.split("\n\n").map(
+          (tileString) => new Tile(tileString)
+        );
+
+        const graph = calculateTileConnections(tiles);
+
+        const firstCornerVersions = getPossibleUpperLeftCornerTiles(graph);
+
+        const imageConfig = findBestImageFit(tiles, graph, firstCornerVersions);
+
+        const image = constructImage(tiles, imageConfig);
+
+        // console.log(
+        //   // rotateMatrix(rotateMatrix(image))
+        //   image.map((r) => r.join("")).join("\n")
+        // );
+      });
+    });
+    describe("findBestImageFit", () => {
+      it("finds the fit of tiles (assuming it is only one) and returns the arrangement", () => {
+        const tiles = TEST_DATA.split("\n\n").map(
+          (tileString) => new Tile(tileString)
+        );
+
+        const graph = calculateTileConnections(tiles);
+
+        const firstCornerVersions = getPossibleUpperLeftCornerTiles(graph);
+        const imageConfig = findBestImageFit(tiles, graph, firstCornerVersions);
+        const textualRepresentation = imageConfig
+          .map((r) =>
+            r.map((ti) => `${ti.tileID}:${ti.tileVersion}`).join("    ")
+          )
+          .join("\n");
+        expect(textualRepresentation).toEqual(`1171:1    2473:0    3079:7
+1489:3    1427:3    2311:3
+2971:3    2729:3    1951:3`);
+      });
+    });
+    describe("constructImage", () => {
+      it("constructs the textual representation of the image", () => {
+        const tiles = TEST_DATA.split("\n\n").map(
+          (tileString) => new Tile(tileString)
+        );
+
+        const graph = calculateTileConnections(tiles);
+
+        const firstCornerVersions = getPossibleUpperLeftCornerTiles(graph);
+        const imageConfig = findBestImageFit(tiles, graph, firstCornerVersions);
+        const img = constructImage(tiles, imageConfig);
+        expect(
+          rotateMatrix(flipMatrixHr(img))
+            .map((r) => r.join(""))
+            .join("\n")
+        ).toEqual(
+          `.#.#..#.##...#.##..#####
+###....#.#....#..#......
+##.##.###.#.#..######...
+###.#####...#.#####.#..#
+##.#....#.##.####...#.##
+...########.#....#####.#
+....#..#...##..#.#.###..
+.####...#..#.....#......
+#..#.##..#..###.#.##....
+#.####..#.####.#.#.###..
+###.#.#...#.######.#..##
+#.####....##..########.#
+##..##.#...#...#.#.#.#..
+...#..#..#.#.##..###.###
+.#.#....#.##.#...###.##.
+###.#...#..#.##.######..
+.#.#.###.##.##.#..#.##..
+.####.###.#...###.#..#.#
+..#.#..#..#.#.#.####.###
+#..####...#.#.#.###.###.
+#####..#####...###....##
+#.##..#..#...#..####...#
+.#.###..##..##..####.##.
+...###...##...#...#..###`
+        );
+      });
+    });
+    describe("revealSeaMonsters", () => {
+      it("replaces the silhouette sea monsters in an image with O characters", () => {
+        const tiles = TEST_DATA.split("\n\n").map(
+          (tileString) => new Tile(tileString)
+        );
+
+        const graph = calculateTileConnections(tiles);
+
+        const firstCornerVersions = getPossibleUpperLeftCornerTiles(graph);
+        const imageConfig = findBestImageFit(tiles, graph, firstCornerVersions);
+        const failImg = constructImage(tiles, imageConfig);
+        const successImg = rotateMatrix(rotateMatrix(failImg));
+
+        expect(revealSeaMonsters(failImg)).toEqual(false);
+        expect(revealSeaMonsters(successImg)).toEqual(true);
+        expect(successImg.map((r) => r.join("")).join("\n"))
+          .toEqual(`.####...#####..#...###..
+#####..#..#.#.####..#.#.
+.#.#...#.###...#.##.O#..
+#.O.##.OO#.#.OO.##.OOO##
+..#O.#O#.O##O..O.#O##.##
+...#.#..##.##...#..#..##
+#.##.#..#.#..#..##.#.#..
+.###.##.....#...###.#...
+#.####.#.#....##.#..#.#.
+##...#..#....#..#...####
+..#.##...###..#.#####..#
+....#.##.#.#####....#...
+..##.##.###.....#.##..#.
+#...#...###..####....##.
+.#.##...#.##.#.#.###...#
+#.###.#..####...##..#...
+#.###...#.##...#.##O###.
+.O##.#OO.###OO##..OOO##.
+..O#.O..O..O.#O##O##.###
+#.#..##.########..#..##.
+#.#####..#.#...##..#....
+#....##..#.#########..##
+#...#.....#..##...###.##
+#..###....##.#...##.##.#`);
+      });
+    });
+    it("satisfies test data", () => {
+      expect(day20("b", TEST_DATA)).toBe("273");
     });
   });
 });

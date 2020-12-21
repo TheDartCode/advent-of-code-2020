@@ -1,6 +1,13 @@
 import { flipMatrixHr, flipMatrixVt, rotateMatrix } from "./helpers";
 
-export type Pixel = "." | "#";
+export type ImagePart = {
+  tileID: TileID;
+  tileVersion: number;
+};
+
+export type ImageConfiguration = ImagePart[][];
+
+export type Pixel = "." | "#" | "O";
 
 export enum EdgeDirection {
   Up = "UP",
