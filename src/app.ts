@@ -21,6 +21,7 @@ import day17 from "./day17";
 import day18 from "./day18";
 import day19 from "./day19";
 import day20 from "./day20";
+import day21 from "./day21";
 import { DayFunc, DayPart } from "./types";
 import { PerformanceMonitor } from "./shared/helpers";
 
@@ -49,6 +50,7 @@ const days: DaysDictionary = {
   "18": day18,
   "19": day19,
   "20": day20,
+  "21": day21,
 };
 
 const day = process.argv[2];
